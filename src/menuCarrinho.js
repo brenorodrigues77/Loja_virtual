@@ -1,5 +1,8 @@
 import { catalogo } from "./utilidades";
 
+const idsQuantidadeItensCarrinho = {};
+
+
 function abrirCarrinho() {
   document.getElementById("carrinho").classList.add("right-[0px]");
   document.getElementById("carrinho").classList.remove("right-[-360px]");
@@ -20,6 +23,7 @@ export function inicializarCarrinho() {
 }
 
 export function adicionarAoCarrinho(idProduto) {
+  idsQuantidadeItensCarrinho[idProduto] = 1;
   const produto = catalogo.find((p) => p.id === idProduto);
   const containerProdutorCarrinho =
     document.getElementById("produtos-carrinho");
@@ -37,8 +41,10 @@ export function adicionarAoCarrinho(idProduto) {
       <p class="text-slate-400 text-xs"> Tamanho M </p>
       <p class="text-green-700 text-lg"> $${produto.preco}</p>
     </div>
-    <div>
-       <button>
+    <div class='flex items-end absolute bottom-0 right-2 text-l'>
+       <button>+</button>
+       <p id='quantidade-${produto.id}' class='ml-2'>${idsQuantidadeItensCarrinho[produto.id]}</p>
+       <button class='ml-2'>-</button>
     </div>
   </article>`;
   containerProdutorCarrinho.innerHTML += CartaoProdutoCarrinho;
