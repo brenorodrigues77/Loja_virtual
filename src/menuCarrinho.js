@@ -22,7 +22,27 @@ export function inicializarCarrinho() {
   botaoAbrirCarrinho.addEventListener("click", abrirCarrinho);
 }
 
+function maiorQuantidadeNoCarrinho(idProduto) {
+  idsQuantidadeItensCarrinho[idProduto]++;
+  atualizarQuantidadeItensCarrinho(idProduto);
+}
+
+function menorQuantidadeNoCarrinho(idProduto) {
+  idsQuantidadeItensCarrinho[idProduto]--;
+  atualizarQuantidadeItensCarrinho(idProduto);
+}
+
+function atualizarQuantidadeItensCarrinho(idProduto) {
+  document.getElementById(`quantidade-${idProduto}`).innerText = idsQuantidadeItensCarrinho[idProduto];
+}
+
 export function adicionarAoCarrinho(idProduto) {
+  if (idProduto in idsQuantidadeItensCarrinho) {
+    maiorQuantidadeNoCarrinho(idProduto);
+
+    return;
+  }
+
   idsQuantidadeItensCarrinho[idProduto] = 1;
   const produto = catalogo.find((p) => p.id === idProduto);
   const containerProdutorCarrinho =
@@ -41,11 +61,19 @@ export function adicionarAoCarrinho(idProduto) {
       <p class="text-slate-400 text-xs"> Tamanho M </p>
       <p class="text-green-700 text-lg"> $${produto.preco}</p>
     </div>
+
     <div class='flex items-end absolute bottom-0 right-2 text-l'>
-       <button>+</button>
+       <button id='maiorquantidade${produto.id}'>+</button>
        <p id='quantidade-${produto.id}' class='ml-2'>${idsQuantidadeItensCarrinho[produto.id]}</p>
-       <button class='ml-2'>-</button>
+       <button class='ml-2' id='menorquantidade${produto.id}' >-</button>
     </div>
   </article>`;
   containerProdutorCarrinho.innerHTML += CartaoProdutoCarrinho;
+
+  document.getElementById(`maiorquantidade${produto.id}`).
+    addEventListener('click', () => maiorQuantidadeNoCarrinho(produto.id))
+
+  document.getElementById(`menorquantidade${produto.id}`).
+    addEventListener('click', () => menorQuantidadeNoCarrinho(produto.id))
 }
+
