@@ -3,7 +3,7 @@ import { adicionarAoCarrinho } from "./menuCarrinho";
 
 export function renderizarCatalogo() {
     for (const produtocatalogo of catalogo) {
-        const cartaoProduto = `<div class='border-solid w-48 m-2 flex flex-col p-2 justify-between shadow-xl shadow-slate-500 rounded-lg group' 
+        const cartaoProduto = `<div class='border-solid w-48 m-2 flex flex-col p-2 justify-between shadow-xl shadow-slate-500 rounded-lg group ${produtocatalogo.short ? "short" : "camiseta"}'
         id='card-produto-${produtocatalogo.id}'>
     <img 
     src="./produtos eecommerce/camisetas/${produtocatalogo.nomeArquivoImagem}" 
