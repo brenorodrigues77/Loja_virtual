@@ -11,7 +11,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
+<body class="bg-stone-200">
 
   <section id="carrinho"
     class="fixed top-0 right-[0px] bg-zinc-500 h-screen w-[360px] text-black duration-300 border-l border-black p-5 flex flex-col justify-between">
@@ -21,7 +21,8 @@
     </div>
     <section id="produtos-carrinho" class="h-3/5 overflow-y-auto flex flex-col gap-2"></section>
     <p id="preco-total" class="bg-slate-200 text-green-600 rounded-sm pl-4">Total: $0</p>
-    <button class="bg-slate-200 text-black p-1">Finalizar Compra</button>
+    <button class="bg-slate-200 text-black p-1 hover:text-slate-200 hover:bg-black p-1 rounded-sm">Finalizar
+      Compra</button>
   </section>
 
   <header class=" flex bg-zinc-500 p-2 justify-between stick top-0 z-10">
@@ -35,19 +36,19 @@
     <section id="filtros" class="p-5 flex">
 
       <div class="px-2">
-        <input id="visualizar-todos" type="radio" name="filtros" class="peer hidden" checked>
+        <input id="visualizar-todos" type="radio" name="filtro" class="peer hidden" checked>
         <label for="visualizar-todos"
           class="peer-checked:bg-slate-950 peer-checked:text-slate-200 peer-checked:font-bold p-2 rounded-xl select-none cursor-pointer">Todos</label>
       </div>
 
       <div class="px-2">
-        <input id="visualizar-short" type="radio" name="filtros" class="peer hidden">
-        <label for="visualizar-short"
-          class="peer-checked:bg-slate-950 peer-checked:text-slate-200 peer-checked:font-bold p-2 rounded-xl select-none cursor-pointer">Shorts</label>
+        <input id="visualizar-bermuda" type="radio" name="filtro" class="peer hidden">
+        <label for="visualizar-bermuda"
+          class="peer-checked:bg-slate-950 peer-checked:text-slate-200 peer-checked:font-bold p-2 rounded-xl select-none cursor-pointer">Bermudas</label>
       </div>
 
       <div class="px-2">
-        <input id="visualizar-camiseta" type="radio" name="filtros" class="peer hidden">
+        <input id="visualizar-camiseta" type="radio" name="filtro" class="peer hidden">
         <label for="visualizar-camiseta"
           class="peer-checked:bg-slate-950 peer-checked:text-slate-200 peer-checked:font-bold p-2 rounded-xl select-none cursor-pointer">Camisetas</label>
       </div>

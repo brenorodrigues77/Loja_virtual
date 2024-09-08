@@ -4,15 +4,15 @@ export const catalogo = [{
     marca: "Renner",
     preco: 60,
     nomeArquivoImagem: "camiseta 1.webp",
-    short: false
+    Bermuda: false
 },
 {
     id: "2",
-    nome: "blusa em viscose amarela e preto",
+    nome: "Blusa em viscose amarela e preto",
     marca: "Renner",
     preco: 60,
     nomeArquivoImagem: "camiseta 2.webp",
-    short: false
+    Bermuda: false
 },
 {
     id: "3",
@@ -20,7 +20,7 @@ export const catalogo = [{
     marca: "Renner",
     preco: 39,
     nomeArquivoImagem: "camiseta 3.jpg",
-    short: false
+    Bermuda: false
 },
 {
     id: "4",
@@ -28,39 +28,39 @@ export const catalogo = [{
     marca: "Renner",
     preco: 45,
     nomeArquivoImagem: "camiseta 4.jpeg",
-    short: false
+    Bermuda: false
 },
 {
     id: "5",
-    nome: "Bermurda listrada azul e branco",
+    nome: "Bermuda listrada azul e branco",
     marca: "Renner",
     preco: 50,
-    nomeArquivoImagem: "Bermurda 1.jpg",
-    short: true
+    nomeArquivoImagem: "Bermuda 1.jpg",
+    Bermuda: true
 },
 {
     id: "6",
-    nome: "Bermurda clara",
+    nome: "Bermuda clara",
     marca: "Renner",
     preco: 50,
-    nomeArquivoImagem: "Bermurda 2.jpeg",
-    short: true
+    nomeArquivoImagem: "Bermuda 2.jpeg",
+    Bermuda: true
 },
 {
     id: "7",
-    nome: "Bermurda branca",
+    nome: "Bermuda branca",
     marca: "Renner",
     preco: 50,
-    nomeArquivoImagem: "Bermurda 3.jpeg",
-    short: true
+    nomeArquivoImagem: "Bermuda 3.jpeg",
+    Bermuda: true
 },
 {
     id: "8",
-    nome: "Bermurda cinza",
+    nome: "Bermuda cinza",
     marca: "Renner",
     preco: 50,
-    nomeArquivoImagem: "Bermurda 4.jpeg",
-    short: true
+    nomeArquivoImagem: "Bermuda 4.jpeg",
+    Bermuda: true
 },
 ];
 
