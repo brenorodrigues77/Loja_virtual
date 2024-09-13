@@ -21,9 +21,9 @@
             <p class="mb-4 text-center font-bold">Por favor, Preencha seus dados</p>
 
             <div class="flex flex-col px-10 py-3">
-                <label for="nome" class="font-bold mb-2 text-sm ">Nome</label>
-                <input type="text" id="nome" class="rounded-sm px-2 border-2 py-1" placeholder="nome e sobrenome"
-                    required>
+                <label for="nome-cliente" class="font-bold mb-2 text-sm ">Nome</label>
+                <input type="text" id="nome-cliente" class="rounded-sm px-2 border-2 py-1"
+                    placeholder="nome e sobrenome" required>
             </div>
 
             <div class="flex flex-col px-10 py-3">
@@ -40,18 +40,18 @@
         </section>
 
         <section id="pagamento-endereço" class="w-1/3 bg-zinc-400 rounded-lg py-5">
-            <p class="mb-4 text-center font-bold">Por favor, Preencha seu endereço</p>
+            <p class="mb-4 text-center font-bold">Por favor, Coloque seu cartao e seu endereço</p>
 
             <div class="flex flex-col px-10 py-3">
                 <label for="nome-cartao" class="font-bold mb-2 text-sm ">Nome do Cartao</label>
-                <input type="text" id="nomecartao" class="rounded-sm px-2 border-2 py-1" placeholder="nome e sobrenome"
+                <input type="text" id="nome-cartao" class="rounded-sm px-2 border-2 py-1" placeholder="nome completo"
                     required>
             </div>
 
             <div class="flex flex-col px-10 py-3">
-                <label for="cartao" class="font-bold mb-2 text-sm ">Numero do Cartao</label>
-                <input type="text" id="cartao" class="rounded-sm px-2 border-2 py-1" placeholder="0000-0000-0000-0000"
-                    required>
+                <label for="numero-cartao" class="font-bold mb-2 text-sm ">Numero do Cartao</label>
+                <input type="text" id="numero-cartao" class="rounded-sm px-2 border-2 py-1"
+                    placeholder="0000-0000-0000-0000" required>
             </div>
 
             <div class="flex">
@@ -61,17 +61,48 @@
                 </div>
 
                 <div class="flex flex-col px-10 py-3 w-1/2">
-                    <label for="CVV" class="font-bold mb-2 text-sm ">Data de Validade</label>
-                    <input type="date" id="DataValidade" class="rounded-sm px-2 border-2 py-1" placeholder="00/00/0000"
+                    <label for="date" class="font-bold mb-2 text-sm ">Data de Validade</label>
+                    <input type="date" id="data-validade" class="rounded-sm px-2 border-2 py-1" placeholder="00/00/0000"
                         required>
                 </div>
             </div>
 
+            <div class="flex flex-col px-10 py-3">
+                <label for="endereco" class="font-bold mb-2 text-sm ">Endereço</label>
+                <input type="text" id="endereco" class="rounded-sm px-2 border-2 py-1" placeholder="endereço" required>
+            </div>
+
+            <div class="flex">
+                <div class="flex flex-col px-10 py-3 w-1/2">
+                    <label for="cep" class="font-bold mb-2 text-sm ">CEP</label>
+                    <input type="number" id="cep" class="rounded-sm px-2 border-2 py-1" placeholder="00.000-000"
+                        required>
+                </div>
+
+                <div class="flex flex-col px-10 py-3 w-1/2">
+                    <label for="casa" class="font-bold mb-2 text-sm ">Numero da Casa</label>
+                    <input type="text" id="casa" class="rounded-sm px-2 border-2 py-1" placeholder="0000" required>
+                </div>
+            </div>
+            <div class="flex flex-col px-10 py-3">
+                <label for="complemento" class="font-bold mb-2 text-sm ">Complemento</label>
+                <input type="text" id="complemento" class="rounded-sm px-2 border-2 py-1" placeholder="Complemento"
+                    required>
+            </div>
+
         </section>
 
-        <section id="produtos-checkcout" class="w-1/3 bg-zinc-400 rounded-lg py-5"></section>
-
+        <section id="produtos-checkcout" class="w-1/3 bg-zinc-400 rounded-lg">
+            <section id="container-produto-checkout" class="h-3/4 overflow-y-auto px-4"></section>
+            <section id="celula-checkout" class="flex flex-col px-4 m-4 h-1/5 justify-around">
+                <p id="preco-total" class="bg-slate-200 text-green-600 rounded-lg pl-4">Total: $0</p>
+                <button class="bg-slate-200 text-black p-1 hover:text-slate-200 hover:bg-black p-1 rounded-lg"
+                    type="submit">Finalizar
+                    Compra</button>
+            </section>
+        </section>
     </form>
+    <script src="./checkout.js" type="module"></script>
 </body>
 
 </html>
