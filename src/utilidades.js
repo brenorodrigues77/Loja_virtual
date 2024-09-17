@@ -72,6 +72,11 @@ export function lerlocalStorage(chave) {
     return JSON.parse(localStorage.getItem(chave));
 }
 
+export function removerLocalStorage(chave) {
+    localStorage.removeItem(chave);
+}
+
+
 
 export function carrinhoCheckout(idProduto, idContainerHTML, quantidadeProduto) {
 
@@ -80,7 +85,7 @@ export function carrinhoCheckout(idProduto, idContainerHTML, quantidadeProduto) 
         document.getElementById(idContainerHTML);
 
     const elementoArticle = document.createElement("article");
-    const articleClasses = ['flex', 'bg-slate-200', 'rounded-lg', 'p-1', 'relative', 'm-4', 'mb-2'];
+    const articleClasses = ['flex', 'bg-slate-200', 'rounded-lg', 'p-1', 'relative', 'm-4', 'mb-2', 'w-96',];
 
     for (const articleClass of articleClasses) {
         elementoArticle.classList.add(articleClass);
